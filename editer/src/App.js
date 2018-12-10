@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-03 18:34:30 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-04 20:16:53
+ * @Last Modified time: 2018-12-10 20:31:27
  */
 import React, { Component } from 'react';
 import logo from './logo.svg';
@@ -43,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default connect(state=>state)(App);
+export default connect()(App);

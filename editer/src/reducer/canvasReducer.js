@@ -1,16 +1,17 @@
 /*
  * @Author: zengjian 
- * @Date: 2018-12-03 18:41:03 
+ * @Date: 2018-12-10 19:22:03 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-03 18:47:18
+ * @Last Modified time: 2018-12-10 19:24:52
  */
 let initialState = {
-
+    zoom:70
 }
+
 const reducer = (state = initialState,action)=>{
     switch (action.type) {
-        case 'update':
-            return {...state,update:action.payload}
+        case 'updateZoom':
+            return {...state,zoom:action.payload}
         default:
             return state
     }
