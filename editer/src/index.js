@@ -2,12 +2,11 @@
  * @Author: zengjian 
  * @Date: 2018-12-03 20:10:00 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-04 20:16:01
+ * @Last Modified time: 2018-12-11 09:51:42
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import reducer from './reducer/index'
@@ -15,6 +14,9 @@ import createStore from './store/store'
 import Provider from './redux/Provider'
 import middlewares from './middleware'
 import logger from './middleware/logger'
+
+import App from './container/index'
+import 'antd/dist/antd.css'
 
 const store=middlewares(new createStore(reducer,{}),[logger])
 

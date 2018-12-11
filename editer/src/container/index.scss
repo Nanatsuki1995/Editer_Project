@@ -1,8 +1,8 @@
 /*
  * @Author: zengjian 
  * @Date: 2018-12-10 19:53:00 
- * @Last Modified by:   zengjian 
- * @Last Modified time: 2018-12-10 19:53:00 
+ * @Last Modified by: zengjian
+ * @Last Modified time: 2018-12-11 10:37:00
  */
 body,html{
     width: 100%;
@@ -22,7 +22,7 @@ body,html{
     position: relative;
     $height:148px;
     .editor-content{
-        height: calc(100%-#{$height});
+        height: calc(100% - #{$height});
         position: relative;
         .editor-left-side,.editor-right-side,.editor-center{
             height: 100%;
