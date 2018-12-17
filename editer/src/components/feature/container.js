@@ -1,13 +1,13 @@
 /*
- * @Author: yuanxy 
- * @Date: 2018-12-16 20:38:48 
- * @Last Modified by:   yuanxy 
- * @Last Modified time: 2018-12-16 20:38:48 
+ * @Author: zengjian 
+ * @Date: 2018-12-17 20:15:46 
+ * @Last Modified by: zengjian
+ * @Last Modified time: 2018-12-17 21:30:05
  */
 import React from 'react'
 import {
     DropTarget,
-
+    
 } from 'react-dnd'
 import { DragDropContext } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
@@ -44,14 +44,14 @@ class Container extends React.Component {
             }
         })
     }
-    renderBox = () => {
+    renderBox = () =>{
         return this.props.comps.map((child, index) => {
-            return <ItemBox key={index} {...child} move={this.move} />
+            return <ItemBox key= {index} {...child} move={this.move} />
         })
     }
     render() {
         const { connectDropTarget } = this.props
-        return connectDropTarget(<div style={{ width: '100%', height: '100%' }}>
+        return connectDropTarget(<div style={{ width: '100%', height: '100%'}}>
             {
                 this.renderBox()
             }
