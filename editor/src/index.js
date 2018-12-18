@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-03 20:10:00 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-11 09:51:42
+ * @Last Modified time: 2018-12-18 20:28:12
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,7 +15,7 @@ import Provider from './redux/Provider'
 import middlewares from './middleware'
 import logger from './middleware/logger'
 
-import App from './container/index'
+import App from './components/echarts/container'
 import 'antd/dist/antd.css'
 
 const store=middlewares(new createStore(reducer,{}),[logger])

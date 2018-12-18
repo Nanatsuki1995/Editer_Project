@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-10 19:52:51 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-17 21:16:17
+ * @Last Modified time: 2018-12-18 20:20:44
  */
 import React from 'react'
 import './index.scss'
@@ -17,6 +17,7 @@ class CanvasCmp extends React.Component{
         const percent = this.props.zoom/100
         return <div className='cp-canvas' style={{width:800*percent,height:600*percent}}>
             <Features />
+            <echartsCmp/>
         </div>
     }
 }
