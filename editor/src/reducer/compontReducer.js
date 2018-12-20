@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-16 16:54:12 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-19 19:00:22
+ * @Last Modified time: 2018-12-20 19:48:48
  */
 import update from 'immutability-helper'
 
@@ -33,6 +33,7 @@ let initialState = {
 }
 
 const reducer = (state = initialState, action) => {
+    console.log(initialState)
     switch (action.type) {
         case 'comp-add':
             const id = state.comps.reduce((a,b)=>a.id>b.id?a.id:b.id)+1
@@ -63,6 +64,13 @@ const reducer = (state = initialState, action) => {
                         }
                         return child
                     })
+                }
+            })
+        
+        case 'comp-delete':
+            return update(state,{
+                comps: {
+                    $remove: state.comps[action.payload.id]
                 }
             })
         default:

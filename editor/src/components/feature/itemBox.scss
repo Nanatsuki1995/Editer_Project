@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-17 20:59:23 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-17 21:01:06
+ * @Last Modified time: 2018-12-20 19:52:10
  */
 .box-feature{
     width: 100px;
@@ -53,5 +53,17 @@
     .u-bottom{
         bottom: -4px;
         left: calc(50% - 4px);
+    }
+    .delete{
+        border: 1px solid #f00;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        background: rgba(255, 0, 0, .5);
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
     }
 }

@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-17 20:15:46 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-19 23:45:39
+ * @Last Modified time: 2018-12-20 20:15:20
  */
 import React from 'react'
 import {
@@ -61,6 +61,17 @@ class Container extends React.Component {
         })
     }
 
+    /**
+     * 添加删除方法
+     */
+    deleteItem = (id) => {
+        return this.props.dispatch({
+            type: 'comp-delete', payload:{
+                id
+            }
+        })
+    }
+    
     selectItem =(id) => {
         this.setState({
             current: id
@@ -83,6 +94,7 @@ class Container extends React.Component {
                 {...child}
                 move={this.move}
                 updateSize={this.updateSize}
+                deleteItem={this.deleteItem}
                 selectItem={this.selectItem}
                 {...this.state}
             />

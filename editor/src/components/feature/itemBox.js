@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-17 20:46:31 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-19 23:42:13
+ * @Last Modified time: 2018-12-20 20:34:01
  */
 import React from 'react'
 import { findDOMNode } from 'react-dom'
@@ -52,6 +52,7 @@ class BoxCmp extends React.Component{
     updateSize = (e, type) => {
         e.preventDefault();
         e.stopPropagation();
+        console.log(111)
         this.setState({
             type: type
         })
@@ -60,7 +61,7 @@ class BoxCmp extends React.Component{
 
     computeSize = (e) => {
         const { type } = this.state
-        const { updateSize, id, width, height, x, y } = this.props
+        const { updateSize, id, width, height, x, y, } = this.props
         const { clientX, clientY } = e
         const { x: xx, y: yy } = findDOMNode(this.ref).getBoundingClientRect()
         switch (type) {
@@ -94,6 +95,7 @@ class BoxCmp extends React.Component{
     }
     render() {
         const { connectDragSource,x,y,background, id, current, width, height, type } = this.props;
+        console.log(this.props)
         return connectDragSource(
             <div ref={e => this.ref = e} onClick={(e) => this.onClickHandler(e, id)}
                 className={`box-feature ${id === current ? 'z-cur' : ''}`}
@@ -112,6 +114,7 @@ class BoxCmp extends React.Component{
                     {type==='bar' && <Bar/>}
                     {type==='line' && <Line/>}
                 </div>
+                <div className='delete' onClick={(e) => this.props.deleteItem(e,'delete')}></div>
             </div>
         )
     }
