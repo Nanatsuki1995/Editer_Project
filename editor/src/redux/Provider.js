@@ -1,8 +1,8 @@
 /*
  * @Author: zengjian 
  * @Date: 2018-12-04 09:43:18 
- * @Last Modified by:   zengjian 
- * @Last Modified time: 2018-12-04 09:43:18 
+ * @Last Modified by: zengjian
+ * @Last Modified time: 2019-02-10 15:36:12
  */
 import React from 'react'
 import Customer from './context'
@@ -21,7 +21,7 @@ export default class Provider extends React.Component{
                 ...this.props.store.getState(),
                 dispatch: this.props.store.dispatch
             })
-        })
+        }) 
     }
     
     render(){

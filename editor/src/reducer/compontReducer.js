@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-16 16:54:12 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-20 19:48:48
+ * @Last Modified time: 2019-02-10 15:08:34
  */
 import update from 'immutability-helper'
 
@@ -67,10 +67,12 @@ const reducer = (state = initialState, action) => {
                 }
             })
         
+        //delete方法
         case 'comp-delete':
             return update(state,{
                 comps: {
-                    $remove: state.comps[action.payload.id]
+                    $set:state.comps.filter(child =>child.id!==action.payload.id)
+                
                 }
             })
         default:

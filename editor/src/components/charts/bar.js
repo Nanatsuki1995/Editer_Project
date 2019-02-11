@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-19 19:33:59 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-19 19:54:42
+ * @Last Modified time: 2019-02-11 16:57:29
  */
 import ReactEcharts from 'echarts-for-react';
 import React from 'react'
@@ -22,6 +22,7 @@ const option = {
         type: 'bar'
     }]
 }
+console.log(option,33333)
 
 
 

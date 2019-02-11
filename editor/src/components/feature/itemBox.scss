@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-17 20:59:23 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-20 19:52:10
+ * @Last Modified time: 2019-02-11 16:15:07
  */
 .box-feature{
     width: 100px;
@@ -11,7 +11,9 @@
     position: absolute;
     z-index: 1;
 }
-
+.delete{
+    font-size: 0
+}
 .z-cur{
     border: 2px blue solid;
     .u-left,.u-top,.u-right,.u-bottom,.u-leftTop,.u-rightTop,.u-rightBottom,.u-leftBottom{
@@ -55,6 +57,7 @@
         left: calc(50% - 4px);
     }
     .delete{
+        color: red;
         border: 1px solid #f00;
         width: 10px;
         height: 10px;
@@ -63,7 +66,7 @@
         right: 3px;
         background: rgba(255, 0, 0, .5);
         font-size: 8px;
-        line-height: 10px;
+        line-height: 8px;
         text-align: center;
     }
 }

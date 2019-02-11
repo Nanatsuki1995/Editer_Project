@@ -2,7 +2,7 @@
  * @Author: zengjian 
  * @Date: 2018-12-17 20:46:31 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-20 20:34:01
+ * @Last Modified time: 2019-02-10 15:15:16
  */
 import React from 'react'
 import { findDOMNode } from 'react-dom'
@@ -114,7 +114,8 @@ class BoxCmp extends React.Component{
                     {type==='bar' && <Bar/>}
                     {type==='line' && <Line/>}
                 </div>
-                <div className='delete' onClick={(e) => this.props.deleteItem(e,'delete')}></div>
+                {/* 删除按钮 */}
+                <div className='delete' onClick={() => this.props.deleteItem(id)}>x</div>
             </div>
         )
     }

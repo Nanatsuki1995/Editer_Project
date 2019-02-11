@@ -2,25 +2,21 @@
  * @Author: zengjian 
  * @Date: 2018-12-19 22:01:22 
  * @Last Modified by: zengjian
- * @Last Modified time: 2018-12-19 22:07:29
+ * @Last Modified time: 2019-02-11 17:34:24
  */
 import ReactEcharts from 'echarts-for-react'
 import React from 'react'
+import config from '../../config'
 
-const option={
-    xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line'
-    }]
-}
+var option
+fetch(config.host+'/menu').then(data=>data.json()).then(data=>{
+    if(data.code){
+        console.log(data,11111)
+        option = data.result[0].option[0]
+    }
+})
 
+console.log(option,33333)
 
 
 const Line=(props)=>{
